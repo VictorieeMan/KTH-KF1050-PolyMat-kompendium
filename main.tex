@@ -1,0 +1,52 @@
+%Created: 2023-08-20
+%By: VictorieeMan
+%URL: https://github.com/VictorieeMan/KTH-KF1050-kompendium
+
+% ------------------- %
+
+%basic preamble
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%custom timestamp
+\usepackage[yyyymmdd]{datetime}
+	\renewcommand{\dateseparator}{--}
+
+%QR-code
+\usepackage{qrcode}
+
+%URL
+\usepackage{hyperref}
+
+%Variables
+\newcommand{\pdfUrl}{https://github.com/VictorieeMan/KTH-KF1050-kompendium/releases}
+\newcommand{\email}{\texttt{kontakt.fvjjg@e-mail.victoriee.org}}
+
+\begin{document}
+\title{Polymera Material\\KTH-KF1050-kompendium}
+\author{Victor Ekekrantz}
+
+\maketitle
+\section*{Förord}
+%qr code to the repo url
+Senaste versionen av detta kompendium finns att hämta på:\\
+\qrcode[height=1in]{
+    \pdfUrl
+}\\
+\url{\pdfUrl}
+
+\noindent
+Kontakt: \email
+
+\noindent
+Kompileringstid:\\ %\pdfcreationdate
+\noindent
+Date: \today,\ Time: \currenttime
+
+
+\tableofcontents
+\include{input/modules/förkunskaper}
+\end{document}
