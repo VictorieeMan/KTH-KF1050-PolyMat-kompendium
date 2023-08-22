@@ -21,32 +21,47 @@
 %URL
 \usepackage{hyperref}
 
+% Tikz
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
 %Variables
 \newcommand{\pdfUrl}{https://github.com/VictorieeMan/KTH-KF1050-kompendium/releases}
 \newcommand{\email}{\texttt{kontakt.fvjjg@e-mail.victoriee.org}}
 
-\begin{document}
-\title{Polymera Material\\KTH-KF1050-kompendium}
+% ------------------- %
+
+% Titlepage
+\title{Polymera Material\\KTH:KF1050-kompendium}
 \author{Victor Ekekrantz}
 
+% ------------------- %
+
+% Document
+\begin{document}
+
+\pagenumbering{gobble}
 \maketitle
-\section*{Förord}
-%qr code to the repo url
-Senaste versionen av detta kompendium finns att hämta på:\\
-\qrcode[height=1in]{
-    \pdfUrl
-}\\
-\url{\pdfUrl}
 
-\noindent
-Kontakt: \email
-
-\noindent
-Kompileringstid:\\ %\pdfcreationdate
-\noindent
-Date: \today,\ Time: \currenttime
-
-
+\include{input/modules/förord}
 \tableofcontents
+
+\pagenumbering{arabic}
 \include{input/modules/förkunskaper}
+\include{input/modules/polymerer}
+\include{input/modules/polymerstrukturen}
+\include{input/modules/plaster}
+\include{input/modules/elaster}
+\include{input/modules/mekaniska_egenskaper}
+\include{input/modules/polymerisation}
+
+\include{input/modules/produktion}
+% \include{input/modules/livscykel}
+% \include{input/modules/återvinning}
+
+\pagenumbering{roman}
+\include{input/modules/bibliografi}
+
+\include{input/modules/draft}
+
 \end{document}
